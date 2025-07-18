@@ -184,6 +184,7 @@
   color: wheat;
   border-radius: 12px;
   padding: 1.5rem;
+ margin-top: 6rem;
   width: 18rem;
   height: 20rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -238,4 +239,84 @@
   color: red;
   text-align: center;
   font-size: 1.2rem;
+}
+
+
+
+@media (max-width: 768px) {
+  .weather-page {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .weather-card {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .weather-main {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .weather-temp {
+    font-size: 1.6rem;
+  }
+
+  .weather-desc {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .Navbar-wraper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-input {
+    width: 6rem;
+    border-radius: 8px;
+    border: 2px solid lightskyblue;
+  }
+
+  .search-form button {
+    width: 4rem;
+    border: 2px solid lightskyblue;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .weather-page {
+    padding: 1rem;
+  }
+
+  .weather-card {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .weather-icon {
+    width: 72px;
+    height: 72px;
+    padding: 0.5rem;
+  }
+
+  .weather-temp {
+    font-size: 1.4rem;
+  }
+
+  .weather-details p {
+    font-size: 0.85rem;
+  }
 }
