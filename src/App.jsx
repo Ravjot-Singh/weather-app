@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Navbar from './components/Navbar';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import './App.css'
 
 const App = () => {
@@ -8,12 +8,10 @@ const App = () => {
     return localStorage.getItem("cityName") || "";
   });
 
-  const navigate = useNavigate(); 
-
-
+  const navigate = useNavigate();
 
   const handleSearch = (city) => {
-    navigate(`/weather/${city}`); 
+    navigate(`/weather/${city}`);
   };
 
   return (
@@ -21,20 +19,27 @@ const App = () => {
       <Navbar
         cityName={cityName}
         setCityName={setCityName}
-        onSearch={handleSearch} 
+        onSearch={handleSearch}
       />
 
       <div className="weather-home">
         <section className="hero">
           <h1 className="hero-title">
             Explore Weather Now
-            <img src="/moving.gif" alt="Cloud Animation" className="hero-icon" />
+            <img
+              src="/moving.gif"
+              alt="Cloud Animation"
+              className="hero-icon"
+            />
           </h1>
           <p className="hero-subtitle">
-            Get instant weather updates for any city. Track temperature, humidity, and more!
+            Get instant weather updates for any city. Track temperature,
+            humidity, and more!
           </p>
           <div className="hero-buttons">
-            <button className="btn" onClick={() => fetchWeather(cityName)}>Start Searching</button>
+            <button className="btn" onClick={() => handleSearch(cityName)}>
+              Start Searching
+            </button>
             <button className="btn">Learn More</button>
           </div>
         </section>
@@ -45,15 +50,27 @@ const App = () => {
           <h2 className="section-title">Why use our Weather App?</h2>
           <div className="feature-grid">
             <div className="feature-item">
-              <img src="/temperature.jpeg" alt="Temperature" className="feature-icon" />
+              <img
+                src="/temperature.jpeg"
+                alt="Temperature"
+                className="feature-icon"
+              />
               <p>✔ Real-time Temperature</p>
             </div>
             <div className="feature-item">
-              <img src="/humidity.jpeg" alt="Humidity" className="feature-icon" />
+              <img
+                src="/humidity.jpeg"
+                alt="Humidity"
+                className="feature-icon"
+              />
               <p>✔ Accurate Humidity Info</p>
             </div>
             <div className="feature-item">
-              <img src="/wind.jpeg" alt="Wind" className="feature-icon" />
+              <img
+                src="/wind.jpeg"
+                alt="Wind"
+                className="feature-icon"
+              />
               <p>✔ Wind Speed Tracking</p>
             </div>
           </div>

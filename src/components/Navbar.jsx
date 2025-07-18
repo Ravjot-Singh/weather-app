@@ -1,8 +1,11 @@
-import { useState, useEffect } from "react"
+import {  useEffect } from "react"
 
 
 
 const Navbar = ({ cityName, setCityName, onSearch }) => {
+
+    
+
 
     useEffect(() => {
         localStorage.setItem("cityName", cityName);
